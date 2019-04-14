@@ -1,89 +1,45 @@
 <html>
 	<head>
-		<style>
-
-		button {
-			border: none;
-		}
-
-		.row-2 {
-			display: flex;
-		}
-
-		.row-2 > button {
-			flex: 50%;
-			margin: 5px;
-			padding: 5px;
-		}
-
-		.row-1 {
-			display: flex
-		}
-
-		.row-1 > button {
-			flex: 100%;
-			margin: 5px;
-			padding: 5px;
-		}
-
-		.row-3 {
-			display: flex;
-			align-items: center;
-		}
-
-		.row-3 > button, .row-3 > div {
-			flex: 33%;
-			margin: 5px;
-			padding: 5px;
-		}
-
-		.col-2 {
-			display: flex;
-			flex-direction: column;
-		}
-
-		.col-2 > button {
-			margin: 5px 0px;
-			padding: 5px;
-		}
-		
-		</style>
+		<link rel="stylesheet" type="text/css" href="remote.css">
+		<script src="remote.js"></script>
+		<link rel="manifest" href="manifest.json">
 	</head>
+
 	<body>
 		<div style="max-width: 250px; background: black">
 			<div class="row-2">
-				<button>PWR</button>
-				<button>SRC</button>
+				<button onclick="press('POWER')">PWR</button>
+				<button onclick="press('AUX_INPUT')">SRC</button>
 			</div>
 			<div class="row-1">
 				<button>Playing...</button>
 			</div>
 			<div class="row-1">
-				<button>P/P</button>
+				<button onclick="press('PLAY_PAUSE')">P/P</button>
 			</div>
 			<div class="row-3">
 				<div class="col-2">
-					<button>&lt;</button>
-					<button>&gt;</button>
+					<button onclick="press('PREV_TRACK')">&lt;</button>
+					<button onclick="press('NEXT_TRACK')">&gt;</button>
 				</div>
 				
 				<div class="col-2">
-					<button>+</button>
-					<button>-</button>
+					<button onclick="press('VOLUME_UP')">+</button>
+					<button onclick="press('VOLUME_DOWN')">-</button>
 				</div>
 				<input size="1" value="70"></input>
 			</div>
 			<div class="row-2">
-				<button>1</button>
-				<button>2</button>
+				<button onclick="press('PRESET_1')">1</button>
+				<button onclick="press('PRESET_2')">2</button>
 			</div>
 			<div class="row-2">
-				<button>3</button>
-				<button>4</button>
+				<button onclick="press('PRESET_3')">3</button>
+				<button onclick="press('PRESET_4')">4</button>
 			</div>
 			<div class="row-2">
-				<button>5</button>
-				<button>6</button>
+				<button onclick="press('PRESET_5')">5</button>
+				<button onclick="press('PRESET_6')">6</button>
 			</div>
 			<div class="row-3">
 				<button>-B</button>
